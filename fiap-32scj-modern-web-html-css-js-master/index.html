@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Meu projeto HTML, CSS, JS</title>
+</head>
+
+<body>
+	<!-- nav bar  -->
+	<nav>
+		<a href="">Fiap</a>
+		<button type="button">
+			<span></span>
+		</button>
+		<div>
+			<a href="#">Home</a>
+			<span>current</span>
+			<a href="#cursos">Cursos</a>
+			<a href="#inscricao">Inscrição</a>
+		</div>
+	</nav>
+	<!-- corpo -->
+	<div>
+		<!-- section cursos -->
+		<section id="cursos">
+			<h1>Cursos Oferecidos</h1>
+			<p>A Fiap oferece cursos na área de T.I. nas seguintes modalidades:</p>
+			<!-- lista -->
+			<ul>
+				<li>Presencial</li>
+				<li>Online</li>
+				<li>
+					<i>In-company</i>
+				</li>
+			</ul>
+			<div>
+				<div>
+					<h3>Presencial</h3>
+					<img src="img/curso-presencial.jpg" />
+					<p>Nesta modalidade os cursos são oferecidos nas unidades: Lins, Paulista, Vila Olímpia e Alphaville.</p>
+					<br />
+					Consulte o <a href="#">portal</a>
+				</div>
+				<div>
+					<h3>Online</h3>
+					<img src="img/curso-online.jpg" alt="">
+					<p>
+						Não tem tempo de ir até nossa unidade? Necessita
+						estudar, e possui
+						horários diversificados? Temos cursos também na
+						modalidade
+						<i>online</i>.
+						<br /> Assim, você estuda na hora e nas datas
+						que estiver disponível,
+						respeitando o período de oferta dos módulos.
+					</p>
+				</div>
+				<div>
+					<h3>
+						<i>In-company</i>
+					</h3>
+					<img src="img/curso-incompany.jpg" />
+					<p>Se sua empresa necessita de treinamentos
+						personalizados, atendendo a
+						necessidades específicas, temos uma
+						equipe altamente capacitada para ir até sua
+						empresa e levar
+						o conteúdo que você precisa.</p>
+				</div>
+			</div>
+		</section>
+		<!-- section inscricao -->
+		<section id="inscricao">
+			<form>
+				<div>
+					<label for="nome">Nome</label>
+					<div>
+						<input type="text" id="nome" placeholder="Nome Completo">
+					</div>
+				</div>
+				<div>
+					<label for="email">
+						Email</label>
+					<div>
+						<input type="email" id="email" placeholder="Email">
+					</div>
+				</div>
+				<fieldset>
+					<div>
+						<legend>
+							Curso desejado</legend>
+						<div>
+							<select id="listaCursos">
+							</select>
+						</div>
+					</div>
+				</fieldset>
+				<div>
+					<div>
+						<button type="submit">Enviar</button>
+					</div>
+				</div>
+			</form>
+		</section>
+	</div>
+	<!-- footer -->
+	<footer>
+		<p>Desenvolvido para os cursos da Fiap</p>
+		<p>Copyright 2018 - Todos os direitos reservados</p>
+	</footer>
+</body>
+
+</html>

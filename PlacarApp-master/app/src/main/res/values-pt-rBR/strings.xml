@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">PlacarApp</string>
+    <string name="title_clube">CLUBES</string>
+    <string name="label_home">Time da Casa</string>
+    <string name="label_visitante">Time Visitante</string>
+    <string name="hint_home">Digite o nome do time da casa</string>
+    <string name="hint_visitante">Digite o nome do time visitante</string>
+    <string name="label_start_game">Começar a Partida</string>
+    <string name="label_develop_by">Desenvolvido por Gabriel</string>
+
+    <string name="message_to_share">O jogo entre %1$s e %2$s foi %3$d a %4$d</string>
+</resources>

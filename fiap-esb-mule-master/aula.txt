@@ -1,0 +1,39 @@
+git clone https://daniboy1982@bitbucket.org/daniboy1982/lab-mule1.git 
+
+mysql -u root -p
+
+
+create user fiapusr identified by 'fiap2019';
+
+ use fiapdb;
+
+CREATE TABLE ALUNO
+ (rm VARCHAR(50) NOT NULL, 
+nome VARCHAR(50) NOT NULL,
+telefone VARCHAR(25), 
+EMAIL VARCHAR(25));
+
+
+local do driver
+
+C:\Program Files\Docker Toolbox\lab-mule1
+
+ grant all privileges on fiapdb.* to fiapusr@'%';
+
+insert into aluno values ('1','daniel','11976772690','daniel.lemes@gmail.com');
+
+
+version: "3"
+services:
+  db-mule:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    ports: 
+     - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "fiap2019"
+      MYSQL_DATABASE: "fiap"
+  nginx:
+    image: nginx:latest
+    ports:
+     - "85:80"

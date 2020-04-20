@@ -1,0 +1,698 @@
+[
+    {
+        "id": "86319612.01f9d8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "88d1300b.5f28a",
+        "type": "firebase config",
+        "z": "",
+        "firebaseurl": "android-iot-8ebcd",
+        "loginType": "none"
+    },
+    {
+        "id": "8879f96.c39cc08",
+        "type": "arduino-board",
+        "z": "",
+        "device": "COM3"
+    },
+    {
+        "id": "561a95f0.8c02cc",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "iot.eclipse.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "57a6f93a.cbc2f8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sala",
+        "tab": "1c0c110a.3a3adf",
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "1c0c110a.3a3adf",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9abd5c53.dd6df",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "88fba8e9.2fae08",
+        "type": "arduino out",
+        "z": "86319612.01f9d8",
+        "name": "LED",
+        "pin": "13",
+        "state": "OUTPUT",
+        "arduino": "8879f96.c39cc08",
+        "x": 370,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ed9be3d5.de814",
+        "type": "inject",
+        "z": "86319612.01f9d8",
+        "name": "LIGAR",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "34a0df6c.e7ad3"
+            ]
+        ]
+    },
+    {
+        "id": "4589c569.2e64bc",
+        "type": "inject",
+        "z": "86319612.01f9d8",
+        "name": "DESLIGAR",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "34a0df6c.e7ad3"
+            ]
+        ]
+    },
+    {
+        "id": "783fa38e.d6083c",
+        "type": "firebase.on",
+        "z": "86319612.01f9d8",
+        "name": "LED",
+        "firebaseconfig": "88d1300b.5f28a",
+        "childpath": "led",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "88fba8e9.2fae08"
+            ]
+        ]
+    },
+    {
+        "id": "34a0df6c.e7ad3",
+        "type": "firebase modify",
+        "z": "86319612.01f9d8",
+        "name": "LED",
+        "firebaseconfig": "88d1300b.5f28a",
+        "childpath": "led",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b73231f.d4758c",
+        "type": "arduino in",
+        "z": "86319612.01f9d8",
+        "name": "TEMPERATURA",
+        "pin": "0",
+        "state": "ANALOG",
+        "arduino": "8879f96.c39cc08",
+        "x": 160,
+        "y": 420,
+        "wires": [
+            [
+                "63380695.1b83a8"
+            ]
+        ]
+    },
+    {
+        "id": "99594154.90712",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "Conversão para Celsius",
+        "func": "msg.payload = msg.payload * 0.48828125;\nmsg.payload = parseFloat(msg.payload).toFixed(2);\ncontext.global.temperatura = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "4e1f5072.c1646",
+                "173a0538.fbfb6b"
+            ]
+        ]
+    },
+    {
+        "id": "4e1f5072.c1646",
+        "type": "firebase modify",
+        "z": "86319612.01f9d8",
+        "name": "TEMPERATURA",
+        "firebaseconfig": "88d1300b.5f28a",
+        "childpath": "temperatura",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 740,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e2be67a.d622ea",
+        "type": "inject",
+        "z": "86319612.01f9d8",
+        "name": "Enviar Temperatura",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 500,
+        "wires": [
+            [
+                "1b91cb36.761165"
+            ]
+        ]
+    },
+    {
+        "id": "1b91cb36.761165",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "Guardar Temperatura",
+        "func": "msg.payload = context.global.temperatura;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 500,
+        "wires": [
+            [
+                "4e1f5072.c1646"
+            ]
+        ]
+    },
+    {
+        "id": "63380695.1b83a8",
+        "type": "delay",
+        "z": "86319612.01f9d8",
+        "name": "Atualização Temperatura",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "99594154.90712"
+            ]
+        ]
+    },
+    {
+        "id": "173a0538.fbfb6b",
+        "type": "mqtt out",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp06",
+        "qos": "",
+        "retain": "true",
+        "broker": "561a95f0.8c02cc",
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9ad1a401.0d05c8",
+        "type": "ui_gauge",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "group": "57a6f93a.cbc2f8",
+        "order": 0,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "TEMP06",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "x": 340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "de3d5f2a.f86b1",
+        "type": "mqtt in",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp06",
+        "qos": "2",
+        "broker": "561a95f0.8c02cc",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "9ad1a401.0d05c8"
+            ]
+        ]
+    },
+    {
+        "id": "51e6fdca.5f4a54",
+        "type": "ui_gauge",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "group": "57a6f93a.cbc2f8",
+        "order": 0,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "TEMP01",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "x": 520,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c4391886.9d50c8",
+        "type": "mqtt in",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp01",
+        "qos": "2",
+        "broker": "561a95f0.8c02cc",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "e15d9a5b.d53e48"
+            ]
+        ]
+    },
+    {
+        "id": "dce51467.c170b8",
+        "type": "mqtt in",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp02",
+        "qos": "2",
+        "broker": "561a95f0.8c02cc",
+        "x": 130,
+        "y": 680,
+        "wires": [
+            [
+                "2afa1dd0.93f312"
+            ]
+        ]
+    },
+    {
+        "id": "a72d7733.9a8688",
+        "type": "mqtt in",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp03",
+        "qos": "2",
+        "broker": "561a95f0.8c02cc",
+        "x": 130,
+        "y": 720,
+        "wires": [
+            [
+                "b1057b04.7774a8"
+            ]
+        ]
+    },
+    {
+        "id": "692faf75.cabbf",
+        "type": "mqtt in",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp04",
+        "qos": "2",
+        "broker": "561a95f0.8c02cc",
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "ba38fec7.b688f"
+            ]
+        ]
+    },
+    {
+        "id": "a81b5509.a8ca88",
+        "type": "mqtt in",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "topic": "temp05",
+        "qos": "2",
+        "broker": "561a95f0.8c02cc",
+        "x": 130,
+        "y": 800,
+        "wires": [
+            [
+                "262057ea.147318"
+            ]
+        ]
+    },
+    {
+        "id": "393109dd.fc2616",
+        "type": "ui_gauge",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "group": "57a6f93a.cbc2f8",
+        "order": 2,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "TEMP02",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "x": 520,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "db49ab15.912b78",
+        "type": "ui_gauge",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "group": "57a6f93a.cbc2f8",
+        "order": 4,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "TEMP04",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "x": 520,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "6df6071f.afb3a8",
+        "type": "ui_gauge",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "group": "57a6f93a.cbc2f8",
+        "order": 5,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "TEMP05",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "x": 520,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f65bde03.bf756",
+        "type": "ui_gauge",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "group": "57a6f93a.cbc2f8",
+        "order": 3,
+        "width": "6",
+        "height": "3",
+        "gtype": "gage",
+        "title": "TEMP03",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "15",
+        "seg2": "30",
+        "x": 520,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "e15d9a5b.d53e48",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "func": "msg.payload = parseFloat(msg.payload).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "51e6fdca.5f4a54"
+            ]
+        ]
+    },
+    {
+        "id": "2afa1dd0.93f312",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "func": "msg.payload = parseFloat(msg.payload).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "393109dd.fc2616"
+            ]
+        ]
+    },
+    {
+        "id": "b1057b04.7774a8",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "func": "msg.payload = parseFloat(msg.payload).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "f65bde03.bf756"
+            ]
+        ]
+    },
+    {
+        "id": "ba38fec7.b688f",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "func": "msg.payload = parseFloat(msg.payload).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 760,
+        "wires": [
+            [
+                "db49ab15.912b78"
+            ]
+        ]
+    },
+    {
+        "id": "262057ea.147318",
+        "type": "function",
+        "z": "86319612.01f9d8",
+        "name": "",
+        "func": "msg.payload = parseFloat(msg.payload).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 800,
+        "wires": [
+            [
+                "6df6071f.afb3a8"
+            ]
+        ]
+    }
+]
